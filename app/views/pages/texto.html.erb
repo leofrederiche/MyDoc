@@ -1,0 +1,13 @@
+<header>
+  <h1>Meu Livro.com</h1>
+
+  <div id="novo">
+    <%= link_to "Inicio", root_path %>
+  </div>
+</header>
+
+<%= form_for @text, url: texto_path do |t| %>
+  <%= t.text_area :texto, :value => "#{@text.texto}" %><br>
+  <%= t.submit "Salvar", id: "salvar" %>
+<% end %>
+
